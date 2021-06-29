@@ -1,0 +1,705 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+<key>kioskSettings</key>
+<array>
+
+<!-- Compatible with Kiosk Pro Basic 10.0, updated December 12, 2020 -->
+
+<!-- Instructions on using this .xml file to remotely control your iPad running Kiosk Pro can be found here: https://www.kioskgroup.com/xml-how-to -->
+
+<!-- Before making changes to this .xml file, please note the following:
+	1. Do not add spaces or line breaks before the first line of this file.
+	2. Any values with the tags <integer> or <real> cannot be left blank; they must have an entry. 
+	3. Ampersands ('&') are a reserved character in XML. If your URL uses one, you will need to instead use the unit code "&amp;".
+	4. If you do not wish to control a specific setting remotely, you can delete the entire entry from (and including) the opening <dict> tag to (and including) the closing </dict> tag or comment the setting so that it is ignored (see below). -->
+
+<!-- Commenting:
+	Certain key-value pairs below are commented out(and thus ignored) by default to prevent accidental overwrite of a manually entered string or because they are rarely used (as in our Advanced Settings at the bottom of the file). Commented pairs can be reenabled by moving the ending '- - >' (without spaces) from after the closing dict tag to the end of the descriptor line. -->
+
+
+<!-- Admin -->
+
+	<!-- Show Settings: 0 = On App Launch or Relaunch from Background, 1 = Never, 2 = On Touch Gesture & Passcode -->
+	<dict>
+		<key>Key</key><string>settingsShowingOption</string>
+		<key>Value</key><integer>0</integer>
+	</dict>
+
+	<!-- Passcode (4 digit string) -->
+	<dict>
+		<key>Key</key><string>settingsPassCode</string>
+		<key>Value</key><string></string>
+	</dict>
+
+
+<!-- Content -->
+
+	<!-- Homepage -->
+	<dict>
+		<key>Key</key><string>homePage</string>
+		<key>Value</key><string>kioskgroup.com/kp-start</string>
+	</dict>
+
+	<!-- Access JavaScript API: 0 = By Injection (Deprecated, Offline Only), 1 = By Import, 2 = Never -->
+	<dict>
+		<key>Key</key><string>accessJS_API</string>
+		<key>Value</key><integer>2</integer>
+	</dict>
+
+
+<!-- Identification -->
+
+	<!-- The following setting is commented out to prevent accidental overwrite of a kiosk identifier. See 'Commenting' at the top to enable. -->
+
+	<!-- Unique iPad ID
+	<dict>
+		<key>Key</key><string>uniqueiPadID</string>
+		<key>Value</key><string></string>
+	</dict>
+	-->
+
+
+<!-- Display -->
+
+	<!-- Show iPad Status Bar -->
+	<dict>
+		<key>Key</key><string>showStatusBar</string>
+		<key>Value</key><false/>
+	</dict>
+
+	<!-- Show Address Bar -->
+	<dict>
+		<key>Key</key><string>showAddressBar</string>
+		<key>Value</key><false/>
+	</dict>
+	
+
+	<!-- Navigation Bar -->
+
+		<!-- Show Navigation Bar -->
+		<dict>
+			<key>Key</key><string>showNavigationBar</string>
+			<key>Value</key><true/>
+		</dict>			
+
+		<!-- Standard Icon Color (0 = Red, 1 = Yellow, 2 = Green, 3 = Blue, 4 = Light Grey, 5 = Dark Grey, 6 = Black, 7 = White) -->
+		<dict>
+			<key>Key</key><string>navBarIconsColorScheme</string>
+			<key>Value</key><string>4</string>
+		</dict>
+
+		<!-- Standard Bar Background Color (RGB) -->
+		<dict>
+			<key>Key</key><string>navBarBackgroundColor</string>
+			<key>Value</key><string>84,84,84</string>
+		</dict>
+
+		<!-- Quick Links -->
+
+			<!-- Enable Quick Links -->
+			<dict>
+				<key>Key</key><string>customLinksEnabled</string>
+				<key>Value</key><true/>
+			</dict>
+
+			<!-- Button Background Color (RGB) -->
+			<dict>
+				<key>Key</key><string>clButtonBackgroundColor</string>
+				<key>Value</key><string></string>
+			</dict>
+
+			<!-- Text Color (RGB) -->
+			<dict>
+				<key>Key</key><string>clButtonTextColor</string>
+				<key>Value</key><string>255,255,255</string>
+			</dict>
+
+			<!-- Quick Links Group 1 -->
+				<!-- Label -->
+				<dict>
+					<key>Key</key><string>clLabel1</string>
+					<key>Value</key><string>Quick Links</string>
+				</dict>
+				<!-- Link -->
+				<dict>
+					<key>Key</key><string>clLink1</string>
+					<key>Value</key><string>https://support.kioskgroup.com/article/1025-how-to-remove-quick-links-in-the-navigation-bar</string>
+				</dict>
+
+			<!-- Quick Links Group 2 -->
+				<dict>
+					<key>Key</key><string>clLabel2</string>
+					<key>Value</key><string></string>
+				</dict>
+				<dict>
+					<key>Key</key><string>clLink2</string>
+					<key>Value</key><string></string>
+				</dict>
+
+			<!-- Quick Links Group 3 -->
+				<dict>
+					<key>Key</key><string>clLabel3</string>
+					<key>Value</key><string></string>
+				</dict>
+				<dict>
+					<key>Key</key><string>clLink3</string>
+					<key>Value</key><string></string>
+				</dict>
+
+			<!-- Quick Links Group 4 -->
+				<dict>
+					<key>Key</key><string>clLabel4</string>
+					<key>Value</key><string></string>
+				</dict>
+				<dict>
+					<key>Key</key><string>clLink4</string>
+					<key>Value</key><string></string>
+				</dict>
+
+			<!-- Quick Links Group 5 -->
+				<dict>
+					<key>Key</key><string>clLabel5</string>
+					<key>Value</key><string></string>
+				</dict>
+				<dict>
+					<key>Key</key><string>clLink5</string>
+					<key>Value</key><string></string>
+				</dict>
+
+			<!-- Quick Links Group 6 -->
+				<dict>
+					<key>Key</key><string>clLabel6</string>
+					<key>Value</key><string></string>
+				</dict>
+				<dict>
+					<key>Key</key><string>clLink6</string>
+					<key>Value</key><string></string>
+				</dict>
+
+	<!-- Show Progress Indicator -->
+	<dict>
+		<key>Key</key><string>showLoadingProgress</string>
+		<key>Value</key><false/>
+	</dict>
+
+	<!-- Loading & Default Background Color or Image (color in RGB format) -->
+	<dict>
+		<key>Key</key><string>pageReloadBackgroundColor</string>
+		<key>Value</key><string>255,255,255</string>
+	</dict>
+
+
+	<!-- PDF Display Settings -->
+
+		<!-- Show Thumbnails -->
+		<dict>
+			<key>Key</key><string>pdfShowThumbs</string>
+			<key>Value</key><true/>
+		</dict>
+
+		<!-- Show Page Numbers -->
+		<dict>
+			<key>Key</key><string>pdfShowPageNumbers</string>
+			<key>Value</key><true/>
+		</dict>
+
+		<!-- Background Color (RGB) or Image -->
+		<dict>
+			<key>Key</key><string>pdfBackgroundImageFile</string>
+			<key>Value</key><string>0,0,0</string>
+		</dict>
+
+		<!-- Page Transition Style: 0 = Scroll, 1 = Page Turn (legacy support), 2 = Hyperlink Only -->
+		<dict>
+			<key>Key</key><string>pdfScrollingType</string>
+			<key>Value</key><integer>0</integer>
+		</dict>
+
+		<!-- For Scroll & Hyperlink Only -->
+
+			<!-- Scroll Orientation: 0 = Horizontal, 1 = Vertical -->
+			<dict>
+				<key>Key</key><string>pdfInfiniteScrollOrientation</string>
+				<key>Value</key><integer>0</integer>
+			</dict>
+
+			<!-- Size to Fit: 0 = Horizontally, 1 = Vertically -->
+			<dict>
+				<key>Key</key><string>pdfSizeToFitOption</string>
+				<key>Value</key><integer>1</integer>
+			</dict>
+
+
+<!-- Interaction -->		
+
+	<!-- Zoom -->
+
+		<!-- Standard Web Pages: 0 = Disable Zoom, 1 = Allow Viewport to Control Zoom through User-Scalable Property, 2 = Always Allow Zoom (WKWebView only) -->
+		<dict>
+			<key>Key</key><string>kp_zoomWithStandardBrowserBehavior</string>
+			<key>Value</key><integer>1</integer>
+		</dict>
+
+		<!-- Disable Zoom on PDF Files -->
+		<dict>
+			<key>Key</key><string>pdfDisableZoom</string>
+			<key>Value</key><false/>
+		</dict>
+
+	<!-- Disable Touch -->
+	<dict>
+		<key>Key</key><string>viewOnly</string>
+		<key>Value</key><false/>
+	</dict>
+
+	<!-- Fix Window to Viewport -->
+	<dict>
+		<key>Key</key><string>disableWebViewBouncing</string>
+		<key>Value</key><true/>
+	</dict>
+
+
+<!-- Content Refresh -->
+
+	<!-- Idle Time Limit (seconds) -->
+	<dict>
+		<key>Key</key><string>idleTime</string>
+		<key>Value</key><string>30</string>
+	</dict>
+
+	<!-- Refresh Homepage (minutes) -->
+	<dict>
+		<key>Key</key><string>refreshTime</string>
+		<key>Value</key><string>0</string>
+	</dict>
+
+
+<!-- Memory & Privacy -->
+
+	<!-- Clear Cache on Content Refresh -->
+	<dict>
+		<key>Key</key><string>clearCache</string>
+		<key>Value</key><false/>
+	</dict>
+	<!-- Clear Local Storage on Content Refresh -->
+	<dict>
+		<key>Key</key><string>kp_clearLocalStorageOnHomepage</string>
+		<key>Value</key><false/>
+	</dict>
+	<!-- Clear Cookies & Session Storage on Content Refresh -->
+	<dict>
+		<key>Key</key><string>clearCookies</string>
+		<key>Value</key><false/>
+	</dict>
+
+
+<!-- Visitor Management -->
+
+	<!-- Allowed Domains: separate multiple entries with semicolon ';' -->
+	<dict>
+		<key>Key</key><string>whiteList</string>
+		<key>Value</key><string></string>
+	</dict>
+	<!-- Restricted Domains: separate multiple entries with semicolon ';' -->
+	<dict>
+		<key>Key</key><string>blackList</string>
+		<key>Value</key><string></string>
+	</dict>
+
+	<!-- Apply Restrictions to Embedded Content -->
+	<dict>
+		<key>Key</key><string>kp_applyRestrictionsToEmbeddedContent</string>
+		<key>Value</key><true/>
+	</dict>
+
+	<!-- Show Blocked Request Alert -->
+	<dict>
+		<key>Key</key><string>showSiteMessage</string>
+		<key>Value</key><true/>
+	</dict>
+
+	<!-- Blocked Request Alert Text -->
+	<dict>
+		<key>Key</key><string>offDomainMessage</string>
+		<key>Value</key><string>Sorry, this site is not allowed.</string>
+	</dict>
+
+	<!-- Browsing Time Limit: -1 = Forever, 5 = 5 min, 10 = 10 min, etc. -->
+	<dict>
+		<key>Key</key><string>browseTime</string>
+		<key>Value</key><integer>-1</integer>
+	</dict>
+
+	<!-- Custom Page for Browsing Time Limit Reached -->
+	<dict>
+		<key>Key</key><string>goodByePage</string>
+		<key>Value</key><string></string>
+	</dict>
+
+
+<!-- Remote Management & Notifications -->
+
+	<!-- Remote Settings Control -->
+	
+		<!-- Enable Remote Settings Control -->
+		<dict>
+			<key>Key</key><string>remoteSettingsEnabled</string>
+			<key>Value</key><false/>
+		</dict>
+	
+		<!-- Settings XML File Location -->
+		<dict>
+			<key>Key</key><string>externalSettingsFile</string>
+			<key>Value</key><string></string>
+		</dict>
+	
+		<!-- Update Period (minutes) -->
+		<dict>
+			<key>Key</key><string>localSettingsUpdatePeriod</string>
+			<key>Value</key><string></string>
+		</dict>
+	
+	<!-- Update Policies -->
+		
+		<!-- Apply Updates: 0 = Immediately, 1 = Delay While Idle Timer is Active -->
+		<dict>
+			<key>Key</key><string>kp_remoteUpdatePolicy</string>
+			<key>Value</key><integer>1</integer>
+		</dict>
+		
+		<!-- Show Update Indicator -->
+		<dict>
+			<key>Key</key><string>kp_showRemoteUpdateIndicator</string>
+			<key>Value</key><true/>
+		</dict>
+		
+		<!-- Update Indicator Text -->
+		<dict>
+			<key>Key</key><string>kp_remoteUpdateIndicatorMessage</string>
+			<key>Value</key><string>Updating. . .</string>
+		</dict>
+
+	<!-- Event Notifications -->
+
+		<!-- Power Supply Change -->
+		<dict>
+		  <key>Key</key><string>emailOnPower</string>
+		  <key>Value</key><false/>
+		</dict>
+
+		<!-- Remote Update of Settings -->
+		<dict>
+			<key>Key</key><string>emailOnRemoteSettingsChange</string>
+			<key>Value</key><false/>
+		</dict>
+
+		<!-- Send Event Notifications Through: 0 = SMTP Email Server, 1 = Zapier Webhook -->
+		<dict>
+			<key>Key</key><string>kp_sendEventNotificationsThrough</string>
+			<key>Value</key><integer>0</integer>
+		</dict>
+
+		<!-- SMTP Email Server -->
+	
+			<!-- From Email -->
+			<dict>
+				<key>Key</key><string>smtpFromEmail</string>
+				<key>Value</key><string></string>
+			</dict>
+	
+			<!-- To Email -->
+			<dict>
+				<key>Key</key><string>smtpToEmail</string>
+				<key>Value</key><string></string>
+			</dict>
+	
+			<!-- SMTP Server -->
+			<dict>
+				<key>Key</key><string>smtpServer</string>
+				<key>Value</key><string></string>
+			</dict>
+	
+			<!-- SMTP Ports -->
+			<dict>
+				<key>Key</key><string>smtpPorts</string>
+				<key>Value</key><string>25; 465; 587</string>
+			</dict>
+	
+			<!-- Requires Authentication -->
+			<dict>
+				<key>Key</key><string>smtpRequiresAuth</string>
+				<key>Value</key><true/>
+			</dict>
+	
+			<!-- User Name -->
+			<dict>
+				<key>Key</key><string>smtpUserName</string>
+				<key>Value</key><string></string>
+			</dict>
+	
+			<!-- Password -->
+			<dict>
+				<key>Key</key><string>smtpPassword</string>
+				<key>Value</key><string></string>
+		   </dict>
+	
+		   <!-- Enable SSL -->
+		   <dict>
+				<key>Key</key><string>smtpEnableSSL</string>
+				<key>Value</key><false/>
+		   </dict>
+	
+		<!-- Zapier Webhook URL -->
+		<dict>
+			<key>Key</key><string>kp_zapierDefaultZapURL</string>
+			<key>Value</key><string></string>
+		</dict>
+
+	
+<!-- Device Access -->
+
+	<!-- Screen Brightness -->
+	
+		<!-- Control Active Brightness Level -->
+		<dict>
+			<key>Key</key><string>kp_isControlBrightnessInKioskEnabled</string>
+			<key>Value</key><false/>
+		</dict>
+		
+		<!-- Active Brightness Level: maximum screen brightness = 1, minimum = 0; setting must be between 1 and 0. Note that this will not have an effect unless 'Control Active Brightness Level' above is true. -->
+		<dict>
+			<key>Key</key><string>manualControlOfBrightness</string>
+			<key>Value</key><real>0.75</real>
+		</dict>
+
+	<!-- Audio Output & Volume -->
+	
+		<!-- Volume cannot be controlled through remote settings controls as Apple does not provide a public API for this functionality. -->
+
+
+<!-- Printing -->
+
+	<!-- Show Print Icon -->
+	<dict>
+		<key>Key</key><string>showPrintIcon</string>
+		<key>Value</key><false/>
+	</dict>
+
+	<!-- Enable AirPrint -->
+	<dict>
+		<key>Key</key><string>printEnabled</string>
+		<key>Value</key><false/>
+	</dict>
+
+
+<!-- Advanced Settings -->
+	
+	<!-- Browser Engine -->
+
+		<!-- Browser Engine: 1 = WKWebView (recommended), 0 = UIWebView (legacy support) -->
+		<dict>
+			<key>Key</key><string>kp_browserEngine</string>
+			<key>Value</key><integer>1</integer>
+		</dict>
+		
+		<!-- Cookie Acceptance Policy (UIWebView Only): 0 = Never Accept, 1 = Accept From Visited, 2 = Always Accept -->
+		<dict>
+			<key>Key</key><string>cookieAcceptPolicy</string>
+			<key>Value</key><integer>1</integer>
+		</dict> 
+
+		<!-- Transform Links for Guided Access (UIWebView only) -->
+		<dict>
+			<key>Key</key><string>kp_transformLinksForGuidedAccess</string>
+			<key>Value</key><true/>
+		</dict>
+		
+	
+	<!-- Display & Interaction -->
+
+		<!-- Allow Text Selection -->
+		<dict>
+			<key>Key</key><string>textSelection</string>
+			<key>Value</key><false/>
+		</dict>
+
+		<!-- Disable Touch Callouts -->
+		<dict>
+			<key>Key</key><string>_kp_disableDefaultCalloutShownWhenTouchAndHoldTarget_</string>
+			<key>Value</key><true/>
+		</dict>
+		
+		<!-- Prevent iOS Drag & Drop -->
+		<dict>
+			<key>Key</key><string>_kp_disable_iOS_DragAndDrop_</string>
+			<key>Value</key><true/>
+		</dict>
+		
+		<!-- Show Keyboard Automatically on Focus Event -->
+		<dict>
+			<key>Key</key><string>kp_showKeyboardAutomaticallyOnFocusEvent</string>
+			<key>Value</key><false/>
+		</dict>
+		
+		<!-- Reset UIScrollView Offset -->
+		<dict>
+			<key>Key</key><string>kp_scrollsContentBehavior_isScrollResetAfterKeyboardShownEnabled</string>
+			<key>Value</key><false/>
+		</dict>
+		
+		<!-- UIScrollView Content Inset Adjustment Behavior: 0 = Never, 1 = Automatic, 2 = Scrollable Axes, 3 = Always -->
+		<dict>
+			<key>Key</key><string>kp_scrollsContentBehavior_contentInsetAdjustmentBehavior</string>
+			<key>Value</key><integer>0</integer>
+		</dict>
+		
+
+	<!-- Memory & Privacy -->
+
+		<!-- Clear Data on Relaunch & Remote Update -->
+		<dict>
+			<key>Key</key><string>kp_clearAppDataOnRelaunch</string>
+			<key>Value</key><true/>
+		</dict>
+			
+		<!-- Ensure Cookies Are Loaded on Homepage -->
+		<dict>
+			<key>Key</key><string>kp_useFalseHomepage</string>
+			<key>Value</key><false/>
+		</dict>
+		
+		<!-- Share Crash Logs with Developer (0 = Automatically, 1 = Do not share, 2 = Request permission on launch) -->
+		<dict>
+			<key>Key</key><string>kp_collectCrashLogsForAnalysisOption</string>
+			<key>Value</key><integer>0</integer>
+		</dict>
+
+
+	<!-- Visitor Management -->
+
+		<!-- Screen Asynchronous Requests with Allowed & Restricted Domains -->
+		<dict>
+			<key>Key</key><string>kp_allowRestrictAsynchronousURLRequests</string>
+			<key>Value</key><true/>
+		</dict>
+			
+
+	<!-- Site Customization -->
+	
+		<!-- Insert Homepage URL Parameters as JavaScript Variables: 0 = On Homepage Only, 1 = Always, 2 = Never -->
+		<dict>
+			<key>Key</key><string>kp_insertHomepageURLParametersAsJavaScriptVariables</string>
+			<key>Value</key><integer>2</integer>
+		</dict>
+
+
+	<!-- Internet Access & Error Handling -->
+	
+		<!-- Monitor Internet Access While Idle -->
+		<dict>
+			<key>Key</key><string>showConnectionProblemPage</string>
+			<key>Value</key><false/>
+		</dict>
+	
+		<!-- Internet Connection Timeout Interval [0.1...60] (seconds) -->
+		<dict>
+			<key>Key</key><string>kp_internetConnection_fromOffline_startCheckTimeoutInterval</string>
+			<key>Value</key><string>0.5</string>
+		</dict>
+		
+		<!-- Alternate Homepage for Offline Use -->
+		<dict>
+			<key>Key</key><string>customConnectionProblemPage</string>
+			<key>Value</key><string></string>
+		</dict>
+	
+		<!-- Page Loading Time Limit (seconds) -->
+		<dict>
+			<key>Key</key><string>pageLoadTime</string>
+			<key>Value</key><string>30</string>
+		</dict>
+	
+		<!-- Allow Exceptions to HTTPS:// Security Protocols: 
+			0 = Always Show Prompt, 1 = Automatically (recommended only in restricted environments where all possible exceptions have been reviewed), 2 = Never (any page with certificate errors will not load) -->
+		<dict>
+			<key>Key</key><string>kp_promptToAllowHTTPSSecurityExceptionsInWKWebView</string>
+			<key>Value</key><integer>0</integer>
+		</dict>
+
+
+	<!-- Troubleshooting -->
+
+			<!-- Log App Events -->
+			<dict>
+				<key>Key</key><string>kp_logMode</string>
+				<key>Value</key><false/>
+			</dict>
+			
+			
+
+<!-- Hidden Settings: Settings in this section are commented out to prevent accidental use. See 'Commenting' at the top to enable. -->
+
+	<!-- Generate Unique iPad ID Remotely
+		The following pair of settings are used for updating kiosks in the field that were intially set up without a Unique iPad ID, but now need one for identification.
+		For more information, visit: https://kioskgroup.com/set-unique-id-remotely 
+	<dict>
+		<key>Key</key><string>kp_setting_command_generateKioskID</string>
+		<key>Value</key><string></string>
+	</dict>
+	<dict>
+		<key>Key</key><string>kp_setting_command_sendContextInfo</string>
+		<key>Value</key><string></string>
+	</dict>
+	-->
+	
+	<!-- Enable Native PDF Viewer 
+		For more information, visit: https://support.kioskgroup.com/article/880-xml-only-settings#native-pdf
+	<dict>
+	  <key>Key</key><string>kp_useNativeBrowserPDFViewer</string>
+	  <key>Value</key><false/>
+	</dict>
+	-->
+	
+	<!-- Allow Tabbing Between Inputs in UIWebView
+		For more information, visit: https://support.kioskgroup.com/article/880-xml-only-settings#tabbing-between-inputs
+	<dict>
+		<key>Key</key><string>kp_enableDropdownsForiOS8</string>
+		<key>Value</key><true/>
+	</dict>
+	-->
+	
+	<!-- Reload Browser After Sleep
+		For more information, visit: https://support.kioskgroup.com/article/880-xml-only-settings#reload-browser-after-sleep 
+	<dict>
+		<key>Key</key><string>kp_reloadBrowserAfterSleep</string>
+		<key>Value</key><false/>
+	</dict>
+	-->
+	
+	<!-- Disable All Internet Monitoring 
+		For more information, visit: https://support.kioskgroup.com/article/880-xml-only-settings#disable-internet-monitoring
+	<dict>
+	  <key>Key</key><string>kp_monitorInternetAccessWhenIdle_totallyDisabled</string>
+	  <key>Value</key><false/>
+	</dict>
+	-->
+	
+	<!-- Reload Browser After Sleep if Page Title Is Undefined
+		For more information, visit: https://support.kioskgroup.com/article/880-xml-only-settings#reload-browser-after-sleep-if-no-title 
+	<dict>
+		<key>Key</key><string>kp_reloadBrowserAfterSleepIfPageTitleUndefined</string>
+		<key>Value</key><false/>
+	</dict>
+	-->
+
+	<!-- Allow UIWebView Alerts
+		For more information, visit: https://support.kioskgroup.com/article/880-xml-only-settings#uiwebview-allow-alerts
+	<key>_kp_isUIWebViewRemovalWarningAllowed</key>
+	<true/>
+	 -->
+			
+</array>
+</dict>
+</plist>
